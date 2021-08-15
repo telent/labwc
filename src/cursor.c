@@ -1,3 +1,5 @@
+#define _XOPEN_SOURCE 600
+#define _GNU_SOURCE 1
 #include <assert.h>
 #include <linux/input-event-codes.h>
 #include <sys/time.h>
