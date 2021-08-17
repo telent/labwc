@@ -150,8 +150,7 @@ arrange_layer(struct wlr_output *output, struct wl_list *list,
 			box.y -= state->margin.bottom;
 		}
 		if (box.width < 0 || box.height < 0) {
-			wlr_log(WLR_ERROR, "protocol error");
-			wlr_layer_surface_v1_destroy(layer);
+			wlr_log(WLR_ERROR, "surface has no positive size");
 			continue;
 		}
 
