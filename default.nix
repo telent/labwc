@@ -22,7 +22,7 @@
 
 stdenv.mkDerivation rec {
   pname = "labwc";
-  version = "unstable-2021-03-15";
+  version = "unstable-2021-08-15";
 
   src = ./.;
 
