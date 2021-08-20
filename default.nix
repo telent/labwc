@@ -7,8 +7,11 @@
 , cairo
 , glib
 , git
+, json_c
+, libevdev
 , libinput
 , libxml2
+, pcre
 , pango
 , wayland
 , wayland-protocols
@@ -30,9 +33,12 @@ stdenv.mkDerivation rec {
   buildInputs = [
     cairo
     glib
+    json_c # for sway
+    libevdev # sway
     libinput
     libxml2
     pango
+    pcre # sway
     wayland
     wayland-protocols
     wlroots

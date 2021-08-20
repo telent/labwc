@@ -18,4 +18,9 @@ let overlay = self: super: {
         };
       })).override { meson = self.mesonNew; };
     };
-in (import <nixpkgs> {  overlays = [overlay]; }).callPackage ./default.nix {}
+    pkgs = import <nixpkgs> {
+      overlays = [overlay];
+    };
+in pkgs.callPackage ./default.nix {
+  meson = pkgs.mesonNew;
+}
